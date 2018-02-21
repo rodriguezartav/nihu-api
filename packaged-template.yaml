@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  FunctionNameSuffix:
+    Type: String
+Resources:
+  MyFunction:
+    Properties:
+      CodeUri: s3://dev3sam/dbfa7c3faff0f7cf2d5bbc4b7e91d93f
+      Environment:
+        Variables:
+          NODE_ENV:
+            Fn::Sub: ${FunctionNameSuffix}
+      FunctionName:
+        Fn::Sub: mylambda-${FunctionNameSuffix}
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Timeout: 300
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

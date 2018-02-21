@@ -1,0 +1,57 @@
+{
+  "title": "update proveedor",
+  "description": "actualiza un proveedor via api",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "nombre del proveedor"
+    },
+    "sfid": {
+      "type": "string",
+      "description": "nombre del proveedor"
+    },
+    "nombre": {
+      "type": "string",
+      "description": "nombre del proveedor"
+    },
+    "activo": {
+      "type": "boolean",
+      "description": "nombre del proveedor"
+    },
+    "tipo": {
+      "type": "string",
+      "description": "tipo de proveedor"
+    },
+    "cedula": {
+      "type": "string",
+      "description": "cedula del proveedor"
+    },
+    "tipo_de_cedula": {
+      "type": "string",
+      "description": "tipo de cedula del proveedor"
+    },
+    "email_notificacion": {
+      "type": "string",
+      "format": "email",
+      "description": "tipo de cedula del proveedor"
+    },
+    "categoria_de_gasto": {
+      "type": "string",
+      "description": "tipo de cedula del proveedor"
+    },
+    "moneda": {
+      "type": "string",
+      "description": "moneda del proveedor"
+    },
+    "plazo": {
+      "type": "number",
+      "description": "plazo del proveedor"
+    },
+    "namespace_id": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "required": ["id","namespace_id"]
+}

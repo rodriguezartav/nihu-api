@@ -1,0 +1,35 @@
+{
+  "name": "cxp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^5.5.2",
+    "ajv-i18n": "^2.2.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "jsforce": "^1.8.0",
+    "knex": "^0.14.2",
+    "merge": "^1.2.0",
+    "mocha": "^4.0.1",
+    "moment": "^2.19.3",
+    "numeral": "^2.0.6",
+    "pg": "^7.4.0",
+    "require-all": "^2.2.0",
+    "superagent": "^3.8.2",
+    "throw.js": "^3.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "jwt-simple": "^0.5.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "aws-sdk": "^2.169.0"
+  }
+}

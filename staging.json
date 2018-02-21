@@ -1,0 +1,28 @@
+{
+  "id": "c98162f5-2fe8-9736-900a-5a8791ec1ad4",
+  "name": "staging",
+  "values": [
+    {
+      "enabled": true,
+      "key": "url",
+      "value": "https://staging-srv.rodcocr.com",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "x-namespace",
+      "value": "apitest",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "auth",
+      "value": "apitest",
+      "type": "text"
+    }
+  ],
+  "timestamp": 1515161720079,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2018-01-05T14:15:21.420Z",
+  "_postman_exported_using": "Postman/5.5.0"
+}

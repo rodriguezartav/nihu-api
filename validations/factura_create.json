@@ -1,0 +1,57 @@
+{
+  "title": "create factura",
+  "description": "crea un factura via api",
+  "type": "object",
+  "properties": {
+    "tipo_de_documento": {
+      "type": "string",
+      "description": "tipo_de_documento del factura"
+    },
+    "plazo": {
+      "type": "number",
+      "description": "plazo de factura"
+    },
+    "tipo_cambio": {
+      "type": "number",
+      "description": "tipo_cambio del factura"
+    },
+    "impuesto": {
+      "type": "number",
+      "description": "impuesto del factura"
+    },
+    "descuento": {
+      "type": "number",
+      "description": "descuento del factura"
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "subtotal del factura"
+    },
+    "total": {
+      "type": "number",
+      "description": "total del factura"
+    },
+    "fecha_facturacion": {
+      "type": "string",
+      "format": "date",
+      "description": "fecha_facturacion del factura"
+    },
+    "proveedor_id": {
+      "type": "number",
+      "description": "proveedor_id del factura"
+    },
+    "referencia": {
+      "type": "string",
+      "description": "referencia del factura"
+    },
+    "observacion": {
+      "type": "string",
+      "description": "observacion del factura"
+    },
+    "namespace_id": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "required": ["tipo_de_documento", "plazo","tipo_cambio","impuesto","descuento","subtotal","total","fecha_facturacion","proveedor_id","referencia","namespace_id"]
+}

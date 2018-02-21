@@ -1,0 +1,32 @@
+{
+  "title": "aplicar factura",
+  "description": "aplicar un factura via api",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "tipo_de_documento del factura"
+    },
+    "referencia_forma_pago": {
+      "type": "string",
+      "description": "plazo de factura"
+    },
+    "forma_de_pago": {
+      "type": "string",
+      "description": "tipo_cambio del factura"
+    },
+    "pago": {
+      "type": "number",
+      "description": "impuesto del factura"
+    },
+    "tipo_cambio_pago": {
+      "type": "number",
+      "description": "descuento del factura"
+    },
+    "namespace_id": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "required": ["id", "referencia_forma_pago","forma_de_pago","pago","tipo_cambio_pago","namespace_id"]
+}

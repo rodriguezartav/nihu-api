@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+
+Parameters:
+  FunctionNameSuffix:
+    Type: String
+
+Resources:
+  cxp:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: !Sub "srv-cxp-${FunctionNameSuffix}"
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Timeout: 300
+      Tracing: Active
+      AutoPublishAlias: live
+      Role: arn:aws:iam::447557482412:role/lambda-srv-role
+      CodeUri: './'
+      Tags:
+        ServiceTag: srv
+      Environment:
+        Variables:
+          NODE_ENV: !Sub "${FunctionNameSuffix}"
+          REQUIRE_KNEX: true
+          RESPONSE_TYPE: "api"
+          DB_HOST: "web.cjadcrgckvdb.us-east-1.rds.amazonaws.com"

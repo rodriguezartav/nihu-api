@@ -1,0 +1,16 @@
+{
+  "title": "anular factura",
+  "description": "anular un factura via api",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "tipo_de_documento del factura"
+    },
+    "namespace_id": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "required": ["id","namespace_id"]
+}
