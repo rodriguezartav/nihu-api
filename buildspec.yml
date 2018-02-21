@@ -8,10 +8,6 @@ phases:
       - npm install newman -g
       - npm install aws-sdk
       - aws s3 sync s3://$S3_KEYS/ ~/.ssh/
-      - rm ~/.ssh/id_rsa
-      - rm ~/.ssh/id_rsa.pub
-      - cp ~/.ssh/id_rsa_proton ~/.ssh/id_rsa
-      - cp ~/.ssh/id_rsa_proton.pub ~/.ssh/id_rsa.pub
       - apt-get update
       - apt-get -y install openssh-client
       - eval `ssh-agent -s`
@@ -22,7 +18,6 @@ phases:
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
       - ssh-agent sh -c 'ssh-add ~/.ssh/id_rsa'
       - git clone git@github.com:Rodco/proton81.git
-      - DOMAIN=nihu.link NODE_ENV=$NODE_ENV node ./proton81/register.js api
       - aws cloudformation package --template-file ./template.yml --s3-bucket nihu-api-cloudformation-packages-west-1   --output-template-file packaged-template.yaml
       - aws cloudformation deploy --template-file ./packaged-template.yaml --stack-name api-$NODE_ENV --parameter-overrides FunctionNameSuffix=$NODE_ENV --capabilities CAPABILITY_IAM --region us-east-1
   post_build:

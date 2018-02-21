@@ -5,7 +5,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       host: "localhost",
-      database: "api",
+      database: "nihu",
       user: "",
       password: ""
     },
@@ -16,7 +16,7 @@ module.exports = {
     connection: {
       host: process.env.DB_HOST,
       database: "api-staging",
-      user: "rodco",
+      user: "web",
       password: process.env.DB_PASSWORD,
       ssl: true
     },
@@ -27,7 +27,7 @@ module.exports = {
     connection: {
       host: process.env.DB_HOST,
       database: "api",
-      user: "rodco",
+      user: "web",
       password: process.env.DB_PASSWORD,
       ssl: true
     },
