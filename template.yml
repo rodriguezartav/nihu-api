@@ -9,7 +9,7 @@ Resources:
   cxp:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: !Sub "srv-cxp-${FunctionNameSuffix}"
+      FunctionName: !Sub "srv-api-${FunctionNameSuffix}"
       Handler: index.handler
       Runtime: nodejs6.10
       Timeout: 300
