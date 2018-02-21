@@ -7,6 +7,7 @@ phases:
       - npm install knex -g
       - npm install newman -g
       - npm install aws-sdk
+      - knex migrate:latest
       - aws s3 sync s3://$S3_KEYS/ ~/.ssh/
       - apt-get update
       - apt-get -y install openssh-client
